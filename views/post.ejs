@@ -1,0 +1,30 @@
+<!-- header -->
+<%- include('partials/header.ejs') %>
+
+<!-- navbar -->
+<%- include('partials/navbar.ejs') %>
+
+<main>
+    <div class="container">
+        <form action="/submit" method="POST">
+
+            <div class="mb-3">
+                <label for="exampleFormControlInput1"
+                    class="form-label d-flex justify-content-center fs-3 fw-bold mb-3">Title</label>
+                <input name="title" type="text" class="form-control" id="title">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlTextarea1"
+                    class="form-label d-flex justify-content-center fs-4 fw-bold mb-3">What's on
+                    your mind?</label>
+                <textarea name="text-area" class="form-control" id="description" rows="17.8"></textarea>
+            </div>
+
+            <input type="submit" value="Submit" class="btn btn-primary btn-lg">
+
+        </form>
+    </div>
+</main>
+
+<!-- footer -->
+<%- include('partials/footer.ejs') %>
