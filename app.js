@@ -45,7 +45,7 @@ app.post('/submit', (req, res) => {
 
     const date = new Date();
     const year = date.getFullYear(); // Get the full year (e.g., 2024)
-    const month = date.toLocaleString('default', { month: 'long' }); // Get the full month name (e.g., December)
+    const month = date.toLocaleString('default', { month: 'long', timeZone: 'UTC' }); // Get the full month name (e.g., December)
     const day = date.getDate(); // Get the day of the month (e.g., 21)
     
     const dateData = `${year}, ${month} ${day}`;

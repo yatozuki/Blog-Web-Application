@@ -14,7 +14,7 @@
                     <div class="content">
                         <h2 class="mb-3">
                             <% if (post.title.length >= 80) { %>
-                                <%= post.context.substring(0, 80) %> <span>....</span>
+                                <%= post.title.substring(0, 80) %> <span>....</span>
                                <% } else {%>
                                        <%= post.title %>
                                    <% } %>
