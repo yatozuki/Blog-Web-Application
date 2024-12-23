@@ -81,7 +81,7 @@ top: 12.4rem;
 
 @media screen and (max-width: 750px) {
     footer > div > p {
-        font-size: 8px;
+        font-size: 10px;
     }
 }
 

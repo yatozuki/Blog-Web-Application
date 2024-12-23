@@ -15,6 +15,12 @@ app.set('views', path.join(__dirname, '/views'));
 app.use(express.static(path.join(__dirname, '/public')));
 app.use(bodyParser.urlencoded({extended: true}));
 
+app.use((req, res, next) => {
+    const date = new Date();
+    res.locals.year = date.getFullYear();
+    next();
+});
+
 
 const posts = [{ 
     id: 0, 
