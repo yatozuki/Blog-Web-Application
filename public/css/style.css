@@ -74,17 +74,19 @@ top: 12.4rem;
     }
 
     footer > div > p {
-        font-size: 15px;
+        font-size: 12px;
     }
     
+}
+
+@media screen and (max-width: 750px) {
+    footer > div > p {
+        font-size: 8px;
+    }
 }
 
 @media screen and (max-width: 478px) {
     .status-code, .content-code {
         font-size: 2rem;
-    }
-    
-    footer > div > p {
-        font-size: 12px;
     }
 }
