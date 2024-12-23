@@ -38,8 +38,8 @@ p {
     color: #D9EAFD
 }
 
-.content-link {
-    text-decoration: none;
+.date {
+    font-size: 1rem;
 }
 
 .no-content {
@@ -51,4 +51,40 @@ top: 12.4rem;
     font-size: 5rem;
     font-weight: bold;
     font-family:Arial, Helvetica, sans-serif;
+}
+
+@media screen and (max-width: 990px) {
+    .context {
+        font-size: 18px;
+    }
+
+    .date {
+        font-size: 0.9rem;
+    }
+
+    textarea {
+        height: 300px;
+    }
+
+    /* .submit {
+    } */
+
+    .status-code, .content-code {
+        font-size: 3rem;
+    }
+
+    footer > div > p {
+        font-size: 15px;
+    }
+    
+}
+
+@media screen and (max-width: 478px) {
+    .status-code, .content-code {
+        font-size: 2rem;
+    }
+    
+    footer > div > p {
+        font-size: 12px;
+    }
 }

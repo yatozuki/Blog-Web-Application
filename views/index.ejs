@@ -4,35 +4,36 @@
 <!-- navbar -->
 <%- include('partials/navbar.ejs') %>
 
-<main>
-
-    <ul class="d-flex flex-column-reverse">
+    <ul class="d-flex flex-column-reverse container">
         <% posts.forEach((post, index) => { %>
         <li class="mb-4">
-            <div class="container border border-1 border-secondary rounded">
-                <a href="/content/<%= index %>" class="content-link" draggable="false">
-                    <div class="content">
-                        <h2 class="mb-3">
-                            <% if (post.title.length >= 80) { %>
+    
+                <div class="border border-1 border-secondary rounded">
+                    <a href="/content/<%= index %>" class="content-link text-decoration-none" draggable="false">
+                        <div class="content">
+                            <h2 class="mb-3 title">
+                                <% if (post.title.length >= 80) { %>
                                 <%= post.title.substring(0, 80) %> <span>....</span>
-                               <% } else {%>
-                                       <%= post.title %>
-                                   <% } %>
-                        </h2>
-                        <hr>
-                        <p>
-                            <% if (post.context.length >= 300) { %>
-                             <%= post.context.substring(0, 300) %> <span>....</span>
-                            <% } else {%>
-                                    <%= post.context %>
+                                <% } else {%>
+                                <%= post.title %>
                                 <% } %>
-                        </p>
-                    </div>
-                </a>
-                <p class="container ms-2 fs-6"> <%= post.dateData %></p>
-            </div>
+                            </h2>
+                            <hr>
+                            <p class="context">
+                                <% if (post.context.length >= 300) { %>
+                                <%= post.context.substring(0, 300) %> <span>....</span>
+                                <% } else {%>
+                                <%= post.context %>
+                                <% } %>
+                            </p>
+                        </div>
+                    </a>
+                    <p class="container ms-2 date"> <%= post.dateData %></p>
+                </div>
+               
+    
         </li>
         <% }) %>
     </ul>
-</main>
+
 <%- include('partials/footer.ejs') %>

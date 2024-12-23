@@ -16,7 +16,12 @@ app.use(express.static(path.join(__dirname, '/public')));
 app.use(bodyParser.urlencoded({extended: true}));
 
 
-const posts = [];
+const posts = [{ 
+    id: 0, 
+    title: 'Note', 
+    context: 'You can create post by clicking the post button. And you can also delete post by clicking the delete button.', 
+    dateData: '2024, December 20' 
+}];
 
 app.get('/', (req, res) => {
     res.render('index.ejs', {posts});
@@ -50,8 +55,10 @@ app.post('/submit', (req, res) => {
     
     const dateData = `${year}, ${month} ${day}`;
 
-
+    
     posts.push({id, title, context, dateData});
+    console.log(posts);
+
     res.redirect('/');
 
 });
